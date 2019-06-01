@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadOnClickPlayButton : MonoBehaviour
+public class SelectSceneScript : MonoBehaviour
 {
-    public void LoadGame(int level)
+    public void LoadScene(int level)
     {
         SceneManager.LoadScene(level);
     }
