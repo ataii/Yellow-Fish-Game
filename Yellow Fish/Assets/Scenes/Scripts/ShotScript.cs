@@ -10,7 +10,7 @@ public class ShotScript : MonoBehaviour
 
     public void Attack()
     {
-        var shotTransform = Instantiate(bulletPrefab) as Transform;
+        Transform shotTransform = Instantiate(bulletPrefab);
         shotTransform.position = transform.position;
         shotTransform.rotation = transform.rotation;
     }
