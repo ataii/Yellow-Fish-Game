@@ -4,16 +4,12 @@ public class EnemySpawnScript : MonoBehaviour
 {
     public float minX, maxX, minY, maxY = 0;
     public GameObject enemy;
-    float randX, randY;
-    Vector2 whereToSpawn;
     public float spawnRate = 2f;
-    float nextSpawn = 0.0f;
 
-    void Start()
-    {
-    }
+    private Vector2 whereToSpawn;
+    private float randX, randY;
+    private float nextSpawn = 0.0f;
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time > nextSpawn)
