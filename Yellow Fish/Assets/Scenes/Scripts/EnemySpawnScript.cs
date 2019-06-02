@@ -3,7 +3,7 @@
 public class EnemySpawnScript : MonoBehaviour
 {
     public float minX, maxX, minY, maxY = 0;
-    public GameObject enemy;
+    public Transform enemy;
     public float spawnRate = 2f;
 
     private Vector2 whereToSpawn;
