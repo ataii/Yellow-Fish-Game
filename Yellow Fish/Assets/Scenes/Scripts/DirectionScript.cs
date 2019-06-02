@@ -10,6 +10,6 @@ public class DirectionScript : MonoBehaviour
         Vector2 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        Debug.Log(Quaternion.AngleAxis(angle, Vector3.forward));
+        //Debug.Log(Quaternion.AngleAxis(angle, Vector3.forward));
     }
 }
