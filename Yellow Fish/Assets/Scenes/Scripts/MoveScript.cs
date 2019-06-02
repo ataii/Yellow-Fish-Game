@@ -4,8 +4,12 @@ public class MoveScript : MonoBehaviour
 {
     public float speed;
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        Move();
+    }
+
+    public void Move() { 
         this.transform.Translate(speed * Time.deltaTime, 0f, 0f);
     }
 }
