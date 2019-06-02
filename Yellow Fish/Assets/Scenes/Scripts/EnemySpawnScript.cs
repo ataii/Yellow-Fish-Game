@@ -13,11 +13,11 @@ public class EnemySpawnScript : MonoBehaviour
 
     void Start()
     {
-        moveScript = enemy.GetComponent<MoveScript>();
     }
 
     void Update()
     {
+        moveScript = enemy.GetComponent<MoveScript>();
         enemy.AddComponent<MoveScript>();
         if (Time.time > nextSpawn)
         {
