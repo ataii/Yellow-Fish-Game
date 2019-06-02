@@ -4,6 +4,7 @@ public class ShotScript : MonoBehaviour
 {
     public Transform bulletPrefab;
     public float cooldown = 0.25f;
+    public Animator animator;
 
     private float shootCooldown;
 
@@ -29,14 +30,15 @@ public class ShotScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        animator.SetBool("Shooting", Input.GetMouseButton(0));
+
         if (CanAttack)
         {
-            shootCooldown = cooldown;
-        if (Input.GetMouseButton(0))
-        {
+            if (Input.GetMouseButton(0))
+            {
             this.Attack();
-            Debug.Log("attak!");
-        }
+            shootCooldown = cooldown;
+            }
         }
     }
 
