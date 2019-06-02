@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class LifeTimeScript : MonoBehaviour
 {
     public float duration = 5f;
 

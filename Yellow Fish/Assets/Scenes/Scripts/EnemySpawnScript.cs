@@ -38,7 +38,7 @@ public class EnemySpawnScript : MonoBehaviour
             }  
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(randX, randY);
-            moveScript.speed = Random.Range(1f, 5f);
+            moveScript.speed = Random.Range(1f, 3f);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
         } 
     }
