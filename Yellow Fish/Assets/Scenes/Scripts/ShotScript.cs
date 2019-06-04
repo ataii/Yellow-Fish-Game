@@ -2,18 +2,12 @@
 
 public class ShotScript : MonoBehaviour
 {
-    public Transform bulletPrefab;
     public float cooldown = 0.25f;
     public Animator animator;
+    public Transform bulletPrefab;
 
     private float shootCooldown;
 
-    public void Attack()
-    {
-        Transform shotTransform = Instantiate(bulletPrefab);
-        shotTransform.position = transform.position;
-        shotTransform.rotation = transform.rotation;
-    }
 
     private void Start()
     {
@@ -48,5 +42,12 @@ public class ShotScript : MonoBehaviour
         {
             return shootCooldown <= 0f;
         }
+    }
+
+    public void Attack()
+    {
+        Transform shotTransform = Instantiate(bulletPrefab);
+        shotTransform.position = transform.position;
+        shotTransform.rotation = transform.rotation;
     }
 }

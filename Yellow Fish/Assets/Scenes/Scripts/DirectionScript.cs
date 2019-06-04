@@ -2,10 +2,14 @@
 
 public class DirectionScript : MonoBehaviour
 {
-    public float rotateSpeed = 15f;
     public Transform target;
 
     void Update()
+    {
+        GetDirection();
+    }
+
+    void GetDirection()
     {
         Vector2 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

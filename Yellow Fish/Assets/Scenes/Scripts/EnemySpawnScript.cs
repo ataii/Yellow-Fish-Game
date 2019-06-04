@@ -7,9 +7,9 @@ public class EnemySpawnScript : MonoBehaviour
     public Transform enemy;
 
     private float minX, maxX, minY, maxY = 0;
-    private Vector2 whereToSpawn;
     private float randX, randY;
     private float nextSpawn = 0.0f;
+    private Vector2 whereToSpawn;
     private MoveScript moveScript;
 
     private void Start()
