@@ -2,7 +2,7 @@
 
 public class PlayerMoveScript : MonoBehaviour
 {
-    public float rotateSpeed = 5f;
+    public float rotateSpeed;
 
     void Update()
     {
