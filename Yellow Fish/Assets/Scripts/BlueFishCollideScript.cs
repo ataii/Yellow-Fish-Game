@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BlueFishCollideScript : MonoBehaviour, ICollidable
+public class BlueFishCollideScript : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D otherCollider)
     {
@@ -10,7 +10,7 @@ public class BlueFishCollideScript : MonoBehaviour, ICollidable
         {
             health.Damage(damageRate.damage);
             Destroy(damageRate.transform.gameObject);
-            if (health.getDeath())
+            if (health.IsDeath())
             {
                 Destroy(transform.gameObject);
             }

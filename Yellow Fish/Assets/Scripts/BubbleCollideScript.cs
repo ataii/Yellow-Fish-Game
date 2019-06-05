@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BubbleCollideScript : MonoBehaviour, ICollidable
+public class BubbleCollideScript : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D otherCollider)
     {

@@ -12,7 +12,7 @@ public class HealthScript : MonoBehaviour
         death = (hp <= 0);
     }
 
-    public bool getDeath()
+    public bool IsDeath()
     {
         return death;
     }
