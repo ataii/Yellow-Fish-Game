@@ -2,15 +2,11 @@
 
 public class PlayerMoveScript : MonoBehaviour
 {
-<<<<<<< HEAD:Yellow Fish/Assets/Scenes/Scripts/PlayerMoveScript.cs
     public float rotateSpeed = 5f;
     public Animator animator;
 
     private float oldRotation;
     private float newRotation;
-=======
-    public float rotateSpeed;
->>>>>>> ea5a659d3dfdb13d5c17760c95d91564a75d1556:Yellow Fish/Assets/Scripts/PlayerMoveScript.cs
 
     void Update()
     {
