@@ -8,11 +8,10 @@ public class BlueFishCollideScript : MonoBehaviour
     {
         HealthScript health = transform.gameObject.GetComponent<HealthScript>();
         DamageRate damageRate = otherCollider.transform.gameObject.GetComponent<DamageRate>();
-        if (damageRate != null)
+        if (damageRate != null && !otherCollider.gameObject.tag.Equals("Enemy"))
         {
             health.Damage(damageRate.damage);
-            Destroy(damageRate.transform.gameObject);
-            if (health.IsDeath())
+            if (health.IsDead())
             {
                 Instantiate(blood, transform.position, Quaternion.identity);
                 Destroy(transform.gameObject);
