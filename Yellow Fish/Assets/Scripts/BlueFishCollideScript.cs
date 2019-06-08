@@ -9,7 +9,6 @@ public class BlueFishCollideScript : MonoBehaviour
         if (damageRate != null)
         {
             health.Damage(damageRate.damage);
-            Destroy(damageRate.transform.gameObject);
             if (health.IsDeath())
             {
                 Destroy(transform.gameObject);
