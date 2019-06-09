@@ -8,7 +8,7 @@ public class TotalScore : MonoBehaviour
     void Start()
     {
         totalScore = GetComponent<Text>();
-        totalScore.text = "Total score: " + ScoreCounterScript.scoreValue;
+        totalScore.text = "TOTAL SCORE: " + ScoreCounterScript.scoreValue;
     }
 
 }

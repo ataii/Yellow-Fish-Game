@@ -14,6 +14,6 @@ public class ScoreCounterScript : MonoBehaviour
 
     private void Update()
     {
-        score.text = "Score: " + scoreValue;
+        score.text = "SCORE: " + scoreValue;
     }
 }
