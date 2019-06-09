@@ -4,8 +4,9 @@ public class BlueFishOpenMouthAnimation : MonoBehaviour
 {
     public Animator animator;
 
-    public void SetStartValueForAnimation(bool isOpen)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        animator.SetBool("isOpen", isOpen);
+        if (collision.tag.Equals("LunchZone"))
+            animator.SetBool("isOpen", true);
     }
 }
