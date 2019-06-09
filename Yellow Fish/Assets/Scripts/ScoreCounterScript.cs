@@ -3,11 +3,12 @@ using UnityEngine.UI;
 
 public class ScoreCounterScript : MonoBehaviour
 {
-    public static int scoreValue = 0;
+    public static int scoreValue;
     Text score;
 
     private void Start()
     {
+        scoreValue = 0;
         score = GetComponent<Text>();
     }
 

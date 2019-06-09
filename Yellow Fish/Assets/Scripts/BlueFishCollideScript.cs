@@ -13,6 +13,7 @@ public class BlueFishCollideScript : MonoBehaviour
             health.Damage(damageRate.damage);
             if (health.IsDead())
             {
+                ScoreCounterScript.scoreValue += 10;
                 Instantiate(blood, transform.position, Quaternion.identity);
                 Destroy(transform.gameObject);
             }
