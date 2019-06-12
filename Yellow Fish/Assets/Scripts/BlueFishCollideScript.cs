@@ -2,7 +2,7 @@
 
 public class BlueFishCollideScript : MonoBehaviour
 {
-    public Transform blood;
+    public Transform particle;
 
     public void OnTriggerEnter2D(Collider2D otherCollider)
     {
@@ -14,7 +14,7 @@ public class BlueFishCollideScript : MonoBehaviour
             if (health.IsDead())
             {
                 ScoreCounterScript.scoreValue += 10;
-                Instantiate(blood, transform.position, Quaternion.identity);
+                Instantiate(particle, transform.position, Quaternion.identity);
                 Destroy(transform.gameObject);
             }
         }
