@@ -2,7 +2,7 @@
 
 public class HealthScript : MonoBehaviour
 {
-    public int hp = 1;
+    [HideInInspector] public int hp = 1;
 
     private bool death = false;
 

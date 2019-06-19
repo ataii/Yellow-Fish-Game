@@ -2,5 +2,5 @@
 
 public class DamageRate : MonoBehaviour
 {
-    public int damage = 1;
+    [HideInInspector] public int damage = 1;
 }

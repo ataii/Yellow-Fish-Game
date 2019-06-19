@@ -2,19 +2,16 @@
 
 public class EnemySpawnScript : MonoBehaviour
 {
-    public float minSpeed, maxSpeed;
     public float spawnRate = 2f;
-    public Transform enemy;
+    public GameObject enemy;
 
     private float minX, maxX, minY, maxY = 0;
     private float randX, randY;
     private float nextSpawn = 0.0f;
     private Vector2 whereToSpawn;
-    private MoveScript moveScript;
 
     private void Start()
-    { 
-        moveScript = enemy.gameObject.GetComponent<MoveScript>();
+    {
         this.GetBoxSize();
     }
 
@@ -39,8 +36,7 @@ public class EnemySpawnScript : MonoBehaviour
             randY = minY.Equals(0f) && maxY.Equals(0f) ? transform.position.y : Random.Range(minY, maxY);
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(randX, randY);
-            moveScript.speed = Random.Range(minSpeed, maxSpeed);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            Instantiate(enemy, whereToSpawn, Quaternion.identity).SetActive(true);
         }
     }
 }

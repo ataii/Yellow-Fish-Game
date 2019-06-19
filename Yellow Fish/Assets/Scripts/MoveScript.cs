@@ -2,9 +2,9 @@
 
 public class MoveScript : MonoBehaviour
 {
-    public float speed;
+    [HideInInspector] public float speed;
 
-    void FixedUpdate()
+    void Update()
     {
         Move();
     }

@@ -2,7 +2,7 @@
 
 public class UpdateRotationScript : MonoBehaviour
 {
-    public Transform target;
+    [HideInInspector] public GameObject target;
 
     void Update()
     {

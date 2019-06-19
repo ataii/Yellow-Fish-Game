@@ -2,9 +2,9 @@
 
 public class ShotScript : MonoBehaviour
 {
-    public float cooldown = 0.25f;
-    public Animator animator;
-    public Transform bulletPrefab;
+    [HideInInspector] public float cooldown = 0.25f;
+    [HideInInspector] public Animator animator;
+    [HideInInspector] public Transform bulletPrefab;
 
     private float shootCooldown;
 
@@ -20,34 +20,20 @@ public class ShotScript : MonoBehaviour
         {
             shootCooldown -= Time.deltaTime;
         }
-    }
-
-    void FixedUpdate()
-    {
         animator.SetBool("Shooting", Input.GetMouseButton(0));
 
-        if (CanAttack)
+        if (shootCooldown <= 0f)
         {
             if (Input.GetMouseButton(0))
             {
-            this.Attack();
-            shootCooldown = cooldown;
+                Attack();
+                shootCooldown = cooldown;
             }
-        }
-    }
-
-    public bool CanAttack
-    {
-        get
-        {
-            return shootCooldown <= 0f;
         }
     }
 
     public void Attack()
     {
-        Transform shotTransform = Instantiate(bulletPrefab);
-        shotTransform.position = transform.position;
-        shotTransform.rotation = transform.rotation;
+        Transform shotTransform = Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 }
