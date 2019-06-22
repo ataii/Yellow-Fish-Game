@@ -6,7 +6,7 @@ public class BubbleScript : MonoBehaviour
     public DamageRate damageRate;
     public int damage;
     public float speed;
-    // Start is called before the first frame update
+
     void Start()
     {
         move.speed = speed;
@@ -15,14 +15,14 @@ public class BubbleScript : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        transform.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
         if (otherCollider.gameObject.tag.Equals("Enemy"))
         {
-            Destroy(transform.gameObject);
+            transform.gameObject.SetActive(false);
         }
     }
 

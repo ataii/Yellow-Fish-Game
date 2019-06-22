@@ -34,6 +34,6 @@ public class ShotScript : MonoBehaviour
 
     public void Attack()
     {
-        Transform shotTransform = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        ObjectPooler.Instance.SpawnFromPool("bubble", transform.position, transform.rotation);
     }
 }
